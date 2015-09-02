@@ -1,0 +1,745 @@
+  [1m[36m (134.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (137.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150902175106)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "contact" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150902175106"]]
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-02 23:24:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 26ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2015-09-02 23:24:13 +0530
+
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ajinkya/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ajinkya/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ajinkya/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.8ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (27.1ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (53.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:24:17 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (72.8ms)
+  Rendered users/new.html.erb within layouts/application (74.3ms)
+Completed 500 Internal Server Error in 491ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.):
+    3: <head>
+    4:   <title>PaperclipApp</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___3022770368875073313_16493860'
+
+
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.8ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (48.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:24:48 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:24:48 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:24:48 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:24:48 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:25:33 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CXuE+7hmKPmMfgcUF28iBirSRskMwVdCdWhO2DOePhNqR7OrJKkuYNHbLiZ/NgIbBEdw3mR/IT8ETEb7idLmpQ==", "user"=>{"name"=>"Ajinkya", "email"=>"kaustubh.gadekar10@gmail.com", "contact"=>"12323435"}, "commit"=>"Create User"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /home/ajinkya/Ruby_Projects/Paperclip_app/app/controllers/users_controller.rb:28)
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (1.1ms)
+
+ExampleMailer#sample_email: processed outbound mail in 308.4ms
+
+Sent mail to kaustubh.gadekar10@gmail.com (1988.5ms)
+Date: Wed, 02 Sep 2015 23:25:34 +0530
+From: from@example.com
+To: kaustubh.gadekar10@gmail.com
+Message-ID: <55e73816158b7_15723ff88cc663fc919ce@ajinkya-Inspiron-3521.mail>
+Subject: Sample Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+<body>
+   <h1>Hi Ajinkya</h1>
+   <p>
+       Sample Email
+   </p>
+</body>
+</html>
+
+  </body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("name", "email", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ajinkya"], ["email", "kaustubh.gadekar10@gmail.com"], ["contact", "12323435"], ["created_at", "2015-09-02 17:55:36.061183"], ["updated_at", "2015-09-02 17:55:36.061183"]]
+  [1m[35m (184.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2539ms (ActiveRecord: 185.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-09-02 23:25:36 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:25:59 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:26:00 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:26:06 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HBCsThGT6o750x2HC0FE5mlAsEXQKa/Rx5dxWuE3bwd/LJsejVzsF6R2NLVjGGT7R9WGUriX2ay2s3l5W3u3sQ==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkyakathe", "contact"=>""}, "commit"=>"Create User"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /home/ajinkya/Ruby_Projects/Paperclip_app/app/controllers/users_controller.rb:28)
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.2ms)
+
+ExampleMailer#sample_email: processed outbound mail in 15.2ms
+
+Sent mail to ajinkyakathe (2708.5ms)
+Date: Wed, 02 Sep 2015 23:26:06 +0530
+From: from@example.com
+To: ajinkyakathe
+Message-ID: <55e738363665e_15723ff88cc663fc920a6@ajinkya-Inspiron-3521.mail>
+Subject: Sample Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+<body>
+   <h1>Hi ajinkya</h1>
+   <p>
+       Sample Email
+   </p>
+</body>
+</html>
+
+  </body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "ajinkya"], ["email", "ajinkyakathe"], ["contact", ""], ["created_at", "2015-09-02 17:56:08.931426"], ["updated_at", "2015-09-02 17:56:08.931426"]]
+  [1m[36m (151.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 2887ms (ActiveRecord: 152.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-09-02 23:26:09 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:26:11 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:26:29 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 20.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:26:52 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17HG7MyvBiP4WhbuS4M4Eu3L9nz11pestNRoopWWr7O0jfG8UGAAuqX/P9wj2hgPw17Aa51o4dHF8GCBL9p3BQ==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"12324"}, "commit"=>"Create User"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /home/ajinkya/Ruby_Projects/Paperclip_app/app/controllers/users_controller.rb:28)
+
+ExampleMailer#sample_email: processed outbound mail in 1.3ms
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pry' for #<Binding:0x007ff11b7fb070>):
+  app/mailers/example_mailer.rb:5:in `sample_email'
+  app/controllers/users_controller.rb:28:in `create'
+
+
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.9ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (49.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:28:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17HG7MyvBiP4WhbuS4M4Eu3L9nz11pestNRoopWWr7O0jfG8UGAAuqX/P9wj2hgPw17Aa51o4dHF8GCBL9p3BQ==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"12324"}, "commit"=>"Create User"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /home/ajinkya/Ruby_Projects/Paperclip_app/app/controllers/users_controller.rb:28)
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (1.5ms)
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.5ms)
+
+ExampleMailer#sample_email: processed outbound mail in 38379.2ms
+
+Sent mail to ajinkya.kathe@cuelogic.co.in (2042.8ms)
+Date: Wed, 02 Sep 2015 23:28:43 +0530
+From: from@example.com
+To: ajinkya.kathe@cuelogic.co.in
+Message-ID: <55e738d357ac6_15fd165f134942fe@ajinkya-Inspiron-3521.mail>
+Subject: Sample Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+<body>
+   <h1>Hi ajinkya</h1>
+   <p>
+       Sample Email
+   </p>
+</body>
+</html>
+
+  </body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("name", "email", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ajinkya"], ["email", "ajinkya.kathe@cuelogic.co.in"], ["contact", "12324"], ["created_at", "2015-09-02 17:58:45.404706"], ["updated_at", "2015-09-02 17:58:45.404706"]]
+  [1m[35m (154.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 40630ms (ActiveRecord: 155.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-09-02 23:28:45 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 191ms (Views: 182.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:28:45 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:28:45 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:28:45 +0530
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-09-02 23:31:17 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 32ms (Views: 21.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:31:17 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:31:17 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:31:17 +0530
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:31:19 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:31:20 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:31:20 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:31:20 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:31:20 +0530
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:31:21 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (31.1ms)
+  Rendered users/new.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:31:27 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RsqYdXKGhlT6QSiRQU/aniVjZOdLCGJ2VLlG8t2lPTol9q8l7kmAzafkAaMpFvqDC/ZS8CO2FAslnU7RZ+nljA==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"1234"}, "commit"=>"Create User"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /home/ajinkya/Ruby_Projects/Paperclip_app/app/controllers/users_controller.rb:28)
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.1ms)
+
+ExampleMailer#sample_email: processed outbound mail in 8736.6ms
+
+Sent mail to ajinkya.kathe@cuelogic.co.in (2634.1ms)
+Date: Wed, 02 Sep 2015 23:31:36 +0530
+From: ajinkyakathe013@gmail.com
+To: ajinkya.kathe@cuelogic.co.in
+Message-ID: <55e73980338ba_15fd2562bb8943d7@ajinkya-Inspiron-3521.mail>
+Subject: Sample Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+<body>
+   <h1>Hi ajinkya</h1>
+   <p>
+       Sample Email
+   </p>
+</body>
+</html>
+
+  </body>
+</html>
+
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("name", "email", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "ajinkya"], ["email", "ajinkya.kathe@cuelogic.co.in"], ["contact", "1234"], ["created_at", "2015-09-02 18:01:38.845754"], ["updated_at", "2015-09-02 18:01:38.845754"]]
+  [1m[36m (138.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 11537ms (ActiveRecord: 140.2ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-09-02 23:31:39 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:32:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 203ms (Views: 188.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:32:58 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:32:58 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:32:58 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:32:58 +0530
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:33:00 +0530
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:33:01 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (21.6ms)
+  Rendered users/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:33:10 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RAppI0+8Uw/BMcD6uK6g2mCTbj9xSfUQ5t1GSxw9GGEnNl5z03NVlpyU6cjQ94DHTgZYKBn3g22X+U5opnHA1w==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"123124"}, "commit"=>"Create User"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /home/ajinkya/Ruby_Projects/Paperclip_app/app/controllers/users_controller.rb:28)
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.5ms)
+
+ExampleMailer#sample_email: processed outbound mail in 4110.0ms
+
+Sent mail to ajinkya.kathe@cuelogic.co.in (4531.7ms)
+Date: Wed, 02 Sep 2015 23:33:14 +0530
+From: ajinkyakathe013@gmail.com
+To: ajinkya.kathe@cuelogic.co.in
+Message-ID: <55e739e282cc6_172122c40b4627d9@ajinkya-Inspiron-3521.mail>
+Subject: Sample Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+<body>
+   <h1>Hi ajinkya</h1>
+   <p>
+       Sample Email
+   </p>
+</body>
+</html>
+
+  </body>
+</html>
+
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("name", "email", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ajinkya"], ["email", "ajinkya.kathe@cuelogic.co.in"], ["contact", "123124"], ["created_at", "2015-09-02 18:03:19.064990"], ["updated_at", "2015-09-02 18:03:19.064990"]]
+  [1m[35m (164.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 8866ms (ActiveRecord: 165.4ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2015-09-02 23:33:19 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:33:46 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:33:47 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.7ms)
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:34:01 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HzVV405WT28vq7X3IkCgJpKuTHh/PAWeIWR3T33GxER8CWKz0plJ9nIOnMVKGYA7vDt6bxeCc+NQQH9sx4oc8g==", "user"=>{"name"=>"Kaustubh", "email"=>"kaustubh.gadekar10@gmail.com", "contact"=>"87878787787"}, "commit"=>"Create User"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /home/ajinkya/Ruby_Projects/Paperclip_app/app/controllers/users_controller.rb:28)
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.1ms)
+
+ExampleMailer#sample_email: processed outbound mail in 4231.6ms
+
+Sent mail to kaustubh.gadekar10@gmail.com (5563.2ms)
+Date: Wed, 02 Sep 2015 23:34:06 +0530
+From: ajinkyakathe013@gmail.com
+To: kaustubh.gadekar10@gmail.com
+Message-ID: <55e73a16a91d_172122c40b46289c@ajinkya-Inspiron-3521.mail>
+Subject: Sample Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+<body>
+   <h1>Hi Kaustubh</h1>
+   <p>
+       Sample Email
+   </p>
+</body>
+</html>
+
+  </body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Kaustubh"], ["email", "kaustubh.gadekar10@gmail.com"], ["contact", "87878787787"], ["created_at", "2015-09-02 18:04:11.606824"], ["updated_at", "2015-09-02 18:04:11.606824"]]
+  [1m[36m (123.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 9926ms (ActiveRecord: 124.3ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2015-09-02 23:34:11 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:34:15 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:35:47 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 17.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-09-02 23:35:53 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:37:29 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 37ms (Views: 18.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:37:36 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XXkuSmvrG7EwdWKwBLTSS8wScklTaN5rvAfDo9S9Ck8+RRka9yQdKG3QS4Js7fJW4odEXjvWqBbNI8uAbvHS+Q==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"12312313"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant UsersController::PaymentsWorker):
+  app/controllers/users_controller.rb:28:in `create'
+
+
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.7ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:38:46 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XXkuSmvrG7EwdWKwBLTSS8wScklTaN5rvAfDo9S9Ck8+RRka9yQdKG3QS4Js7fJW4odEXjvWqBbNI8uAbvHS+Q==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"12312313"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+NameError (uninitialized constant UsersController::PaymentsWorker):
+  app/controllers/users_controller.rb:28:in `create'
+
+
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.1ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (45.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:41:08 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XXkuSmvrG7EwdWKwBLTSS8wScklTaN5rvAfDo9S9Ck8+RRka9yQdKG3QS4Js7fJW4odEXjvWqBbNI8uAbvHS+Q==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"12312313"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms)
+
+NameError (uninitialized constant UsersController::PaymentsWorker):
+  app/controllers/users_controller.rb:28:in `create'
+
+
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (49.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:41:13 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (23.2ms)
+  Rendered users/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 206ms (Views: 204.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:41:13 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:41:13 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:41:13 +0530
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-09-02 23:41:14 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-84ba24b549ce127db56ca57e01f77f9e02aa2dbebe85f483f7619c58a03673cb.css?body=1" for 127.0.0.1 at 2015-09-02 23:41:14 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 23:41:14 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-09-02 23:41:14 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2015-09-02 23:41:16 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ui7UcKHDUyRhB0gARFO7vg/smazL7mJjray7zH5dbqnZEuMgPQxVvTyiYTIsCpujIXmvu6NQFB7ciLPvxBG2Hw==", "user"=>{"name"=>"ajinkya", "email"=>"ajinkya.kathe@cuelogic.co.in", "contact"=>"12312313"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant UsersController::PaymentsWorker):
+  app/controllers/users_controller.rb:28:in `create'
+
+
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (26.8ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ajinkya/.rvm/gems/ruby-2.2.1@paperclip/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (53.6ms)
